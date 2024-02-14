@@ -11,16 +11,18 @@ SelamVer("Engin");
 SelamVer("Ahmet");
 SelamVer();
 
-int sonuc = Topla();
+int sonuc = Topla(3,5);
 
 static void SelamVer(string isim="isimsiz")
 {
     Console.WriteLine("Merhaba "+isim);
 }
 
-static int Topla()
+static int Topla(int sayi1, int sayi2)
 {
-    return 5;
+    int sonuc = sayi1 + sayi2;
+    Console.WriteLine("Toplam : " +sonuc);
+    return sonuc;
 }
 
 public class Vatandas
