@@ -13,12 +13,30 @@ SelamVer();
 
 int sonuc = Topla(3,5);
 
+//Diziler / Arrays
+string[] ogrenciler = new string[3];
+ogrenciler[0] = "Engin";
+ogrenciler[1] = "Kerem";
+ogrenciler[2] = "Berkay";
+
+for (int i = 0; i < ogrenciler.Length; i++)
+{
+    Console.WriteLine(ogrenciler[i]);
+}
+
+string[] sehirler1 = new[] { "Ankara", "İstanbul", "İzmir" };
+string[] sehirler2 = new[] { "Bursa", "Antalya", "Diyarbakır" };
+
+sehirler2 = sehirler1;
+sehirler1[0] = "Adana";
+Console.WriteLine(sehirler2[0]);
+
 static void SelamVer(string isim="isimsiz")
 {
     Console.WriteLine("Merhaba "+isim);
 }
 
-static int Topla(int sayi1, int sayi2)
+static int Topla(int sayi1=5, int sayi2=10)
 {
     int sonuc = sayi1 + sayi2;
     Console.WriteLine("Toplam : " +sonuc);
