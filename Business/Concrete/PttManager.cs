@@ -19,4 +19,5 @@ namespace Business.Concrete
             }
         }
     }
+    //sa
 }
