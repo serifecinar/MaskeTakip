@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Business.Concrete;
 
-internal class ForeigneManager : IApplicantService
+internal class ForeignerManager : IApplicantService
 {
     public void ApplyForMask(Person person)
     {
