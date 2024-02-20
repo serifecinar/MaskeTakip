@@ -1,5 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using Business.Concrete;
+using Entities.Concrete;
+
 Vatandas vatandas1 = new Vatandas();
 
 //string mesaj = "Merhaba";
@@ -30,7 +33,17 @@ sehirler2 = sehirler1;
 sehirler1[0] = "Adana";
 Console.WriteLine(sehirler2[0]);
 
-PttManager pttmanager = new PttManager();
+Person person1 = new Person();
+person1.FirstName = "ŞERİFE";
+person1.LastName="ÇINAR";
+person1.DateOfBirthYear = 1986;
+person1.NationalIdentity = 123;
+
+Person person2 = new Person();
+person2.FirstName = "Şerife";
+
+PttManager pttmanager = new PttManager(new PersonManager());
+pttmanager.GiveMask(person1);
 
 static void SelamVer(string isim="isimsiz")
 {
