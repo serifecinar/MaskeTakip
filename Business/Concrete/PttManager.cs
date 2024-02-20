@@ -6,18 +6,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business.Concrete
+namespace Business.Concrete;
+
+public class PttManager
 {
-    public class PttManager
+    private IApplicantService _applicantService;
+
+    public PttManager(IApplicantService applicantService) //constructor new yapıldığında çalışır
     {
-        private IApplicantService _applicantService;
-        public void GiveMask(Person person)
+        _applicantService = applicantService;
+    }
+
+
+    public void GiveMask(Person person)
+    {
+        if (_applicantService.CheckPerson(person))
         {
-            if (personManager.CheckPerson(person))
-            {
-                Console.WriteLine(person.FirstName + " için maske verildi");
-            }
+            Console.WriteLine(person.FirstName + " için maske verildi");
         }
     }
-    //sa
 }

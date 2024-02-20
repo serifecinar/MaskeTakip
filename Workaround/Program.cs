@@ -2,7 +2,6 @@
 
 Vatandas vatandas1 = new Vatandas();
 
-
 //string mesaj = "Merhaba";
 //double tutar = 10000 //db den gelir
 //    int sayi= 100;
@@ -30,6 +29,8 @@ string[] sehirler2 = new[] { "Bursa", "Antalya", "Diyarbakır" };
 sehirler2 = sehirler1;
 sehirler1[0] = "Adana";
 Console.WriteLine(sehirler2[0]);
+PttManager pttmanager = new PttManager();
+
 
 static void SelamVer(string isim="isimsiz")
 {
